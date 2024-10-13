@@ -1,6 +1,6 @@
 // components/OurStartups.js
 import Image from "next/image";
-import StartupImmage from "@/public/images/startup.jpg";
+import StartupImmage from "@/public/images/p1.png";
 import ArrowImage from "@/public/images/arrow.png";
 
 export default function OurStartups() {
@@ -66,9 +66,9 @@ export default function OurStartups() {
               <Image
                 src={startup.imageUrl}
                 alt={startup.name}
-                width={400}
-                height={250}
-                className="w-full h-48 object-cover rounded-3xl"
+                width={1000}
+                height={1000}
+                className=" h-60 object-cover rounded-3xl"
               />
               <div className="flex items-center justify-between">
                 {/* Content */}
@@ -81,7 +81,13 @@ export default function OurStartups() {
 
                 {/* Arrow Icon */}
                 <div className="p-4  flex justify-end items-center hover:cursor-pointer">
-                  <Image src={ArrowImage} alt="Arrow" width={60} height={60} />
+                  <Image
+                    src={ArrowImage}
+                    alt="Arrow"
+                    width={1000}
+                    height={1000}
+                    className="w-20 h-20 object-contain"
+                  />
                 </div>
               </div>
             </div>

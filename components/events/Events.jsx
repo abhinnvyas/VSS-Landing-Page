@@ -1,50 +1,83 @@
+// pages/events.js
 import React from "react";
-import Image from "next/image";
-import StartupImmage from "@/public/images/startup.jpg";
-import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import StartupImage from "@/public/images/event.png"; // Ensure this path is correct for your image
+import EventCard from "./EventCard";
+
+const events = [
+  {
+    id: 1,
+    title: "Event 1",
+    description:
+      "This is an event held by startup foundations for startups to present their idea.",
+    date: "20th Jan 2024",
+    time: "10:00 AM",
+    image: StartupImage,
+    bgColor: "#15222B", // Dynamic background color
+    titleColor: "#FFFFFF", // Dynamic title color
+    desColor: "#A5B9C8", // Dynamic description color
+  },
+  {
+    id: 2,
+    title: "Event 2",
+    description:
+      "This a event held by startup foundations for startups to present their idea",
+    bgColor: "#E8E8E8", // No date, time, or image
+    image: StartupImage,
+    titleColor: "#111111",
+    desColor: "#111111",
+  },
+  {
+    id: 3,
+    title: "Event 3",
+    description:
+      "This is an event held by startup foundations for startups to present their idea.",
+    date: "22nd Jan 2024",
+    time: "2:00 PM",
+    image: StartupImage,
+    bgColor: "#15222B",
+    titleColor: "#FFFFFF",
+    desColor: "#A5B9C8",
+  },
+  {
+    id: 4,
+    title: "Event 4",
+    description:
+      "This a event held by startup foundations for startups to present their idea",
+    bgColor: "#E8E8E8", // No image, date, or time
+    textColor: "#111111",
+    desColor: "#111111",
+  },
+
+  // Add more events here as needed
+];
 
 const Events = () => {
   return (
-    <div className="p-10 mt-20 mb-20">
-      <div className="grid grid-cols-4">
-        <div className="col-span-1">
-          {/* Card 1 */}
-          <div className="bg-[#15222B] p-4 rounded-3xl">
-            <Image
-              src={StartupImmage}
-              alt="Card Image"
-              width={400}
-              height={250}
-              className="w-full h-48 object-cover rounded-3xl"
+    <div className="p-10 mt-20 relative mb-20">
+      <div className="grid grid-cols-4 gap-4">
+        {events.map((event) => (
+          <div key={event.id} className="col-span-1">
+            <EventCard
+              image={event.image}
+              title={event.title}
+              description={event.description}
+              date={event.date}
+              time={event.time}
+              bgColor={event.bgColor}
+              titleColor={event.titleColor}
+              desColor={event.desColor}
             />
-            {/* Text */}
-            <div>
-              <h1 className="text-lg font-semibold text-white">Event 1</h1>
-              <p className="text-gray-400 text-sm">
-                This a event held by startup foundations for startups to present
-                their idea
-              </p>
-              <div className="flex items-center justify-start space-x-2">
-                <div className="bg-[#28353F] px-4 py-2 rounded-full">
-                  <h1 className="text-white text-xs">20th Jan 2024</h1>
-                </div>
-                <div className="bg-[#28353F] px-4 py-2 rounded-full">
-                  <h1 className="text-white text-xs">10:00 AM</h1>
-                </div>
-                <div className="bg-white  rounded-full w-10 h-10 flex items-center justify-center">
-                  <ArrowUpRightIcon
-                    className="text-[#15222B]"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-              </div>
-            </div>
           </div>
+        ))}
+        <div className="border-b-8 w-[20%]  absolute bottom-10  right-10 border-red-600">
+          <h1 className="text-5xl font-bold mb-2 text-right">EVENTS</h1>
         </div>
-        <div className="col-span-1"></div>
-        <div className="col-span-1"></div>
-        <div className="col-span-1"></div>
+      </div>
+      <div className="flex justify-center mt-8">
+        <button className="text-black  py-2 px-6 rounded-full">
+          View More 
+        </button>
+        
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ export default function Home() {
       <Slogan1Section />
       <OurStartups />
       <Slogan2Section />
-      {/* <Events /> */}
+      <Events />
       {/* CTABanner */}
       {/* MentorSection */}
       {/* BoardSection */}
