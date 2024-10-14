@@ -49,8 +49,8 @@ function Footer() {
             <div className="w-full md:w-1/3">
               <h4 className="text-red-600 font-semibold mb-4">Newsletter</h4>
               <p className="text-sm mb-4">
-                Don't Miss To Subscribe To Our New Feeds, Kindly Fill The Form
-                Below.
+                Don{"'"}t Miss To Subscribe To Our New Feeds, Kindly Fill The
+                Form Below.
               </p>
               <form className="flex">
                 <input
