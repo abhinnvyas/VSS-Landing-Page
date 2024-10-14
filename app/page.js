@@ -1,3 +1,4 @@
+import CTABanner from "@/components/cta/CTABanner";
 import Events from "@/components/events/Events";
 import HeroSection from "@/components/hero/HeroSection";
 import InvestmentPartners from "@/components/investmentpartners/InvestmentPartners";
@@ -18,7 +19,7 @@ export default function Home() {
       <OurStartups />
       <Slogan2Section />
       {/* <Events /> */}
-      {/* CTABanner */}
+      <CTABanner />
       {/* MentorSection */}
       {/* BoardSection */}
       {/* Footer */}
