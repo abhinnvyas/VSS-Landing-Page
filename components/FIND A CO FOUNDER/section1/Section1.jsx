@@ -9,7 +9,7 @@ const Section1 = () => {
           network who are ready to start a company
         </h1>
         <p className="font-[600] text-[#6C7C88] text-xl mt-4 ">
-          That's why we built co-founder matching
+          That{"'"}s why we built co-founder matching
         </p>
       </div>
     </section>
