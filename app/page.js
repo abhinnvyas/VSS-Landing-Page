@@ -23,8 +23,6 @@ export default function Home() {
       <Slogan2Section />
       <Events />
       {/* <WorkspaceBanner /> */}
-
-      {/* CTABanner */}
       <Mentor />
       <Governers />
       <Footer />

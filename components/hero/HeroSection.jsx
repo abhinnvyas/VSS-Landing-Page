@@ -41,7 +41,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Images Section */}
-          <div className="mt-12 md:mt-0 md:ml-12 grid grid-cols-2 gap-4 max-w-md">
+          <div className="mt-12  grid grid-cols-2 gap-4 max-w-md">
             {/* Main Image */}
             <div className="col-span-2">
               <Image
