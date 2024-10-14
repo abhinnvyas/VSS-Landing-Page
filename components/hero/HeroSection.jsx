@@ -8,7 +8,7 @@ export default function HeroSection() {
       <section className=" bg-background">
         <div className="flex flex-col md:flex-row items-center justify-between w-full p-10 min-h-[calc(100vh-80px)]">
           {/* Left Content */}
-          <div className="text-center md:text-left max-w-lg mt-10 px-7">
+          <div className="text-center md:text-left max-w-lg mt-20 md:mt-14 lg:mt-10 px-7">
             <div className="flex items-center space-x-3">
               <h1 className="text-6xl font-bold text-[#111111]">Vadodara</h1>
               <Image

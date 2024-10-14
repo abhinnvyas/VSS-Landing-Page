@@ -42,7 +42,7 @@ export default function Mentor() {
 
           <div className="flex justify-between w-full flex-wrap">
             {mentors.map((mentor, index) => (
-              <div key={index} className="w-72">
+              <div key={index} className="w-72 mx-auto mt-5 md:mt-0">
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg relative">
                   <Image
                     src={mentor.image}
@@ -56,7 +56,7 @@ export default function Mentor() {
                     <p className="text-xs">{mentor.title}</p>
                   </div>
                 </div>
-                <button className="w-full mt-4 py-3 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition-colors duration-300">
+                <button className="w-full text-sm md:text-md mt-2 py-2 md:py-3 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition-colors duration-300">
                   Consult
                 </button>
               </div>

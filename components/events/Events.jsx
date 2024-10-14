@@ -54,7 +54,10 @@ const events = [
 const Events = () => {
   return (
     <div className="p-10 mt-20 relative mb-20 bg-background">
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="border-b-8 block md:hidden w-[20%] grid-cols-1 border-red-600">
+          <h1 className="text-5xl font-bold mb-2 text-right">EVENTS</h1>
+        </div>
         {events.map((event) => (
           <div key={event.id} className="col-span-1">
             <EventCard
@@ -69,7 +72,7 @@ const Events = () => {
             />
           </div>
         ))}
-        <div className="border-b-8 w-[20%]  absolute bottom-10  right-10 border-red-600">
+        <div className="border-b-8 w-[20%] hidden md:block  absolute bottom-10  right-10 border-red-600">
           <h1 className="text-5xl font-bold mb-2 text-right">EVENTS</h1>
         </div>
       </div>

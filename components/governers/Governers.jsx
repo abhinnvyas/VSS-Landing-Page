@@ -2,14 +2,15 @@ import Image from "next/image";
 
 export default function Governers() {
   return (
-    <div className="border-b-4 h-[60vh] border-[#E42A2A]  bg-[#15222B] text-white">
+    <div className="border-b-4  border-[#E42A2A]  bg-[#15222B] text-white">
       {/* Top section */}
       <div className="relative overflow-hidden px-10">
         <div className="absolute -top-10 left-10 w-2 h-40 bg-red-600"></div>
         <div className="absolute top-0 right-0 w-0 h-0 border-t-[150px] border-r-[150px] border-t-transparent border-r-red-600"></div>
         <div className="container mx-auto px-4 py-8">
           <h2 className="text-2xl font-bold mb-8 w-10">BOARD OF GOVERNORS</h2>
-          <div className="flex items-center space-x-8">
+          <div className="flex flex-col md:flex-row items-center space-x-8">
+            {/* Logo */}
             <div className="relative flex justify-center items-center  p-10">
               {/* Right Laurel Wing (Flipped) */}
               <div className="absolute ">
@@ -33,6 +34,7 @@ export default function Governers() {
                 />
               </div>
             </div>
+            {/* Text */}
             <div>
               <h3 className="text-xl font-semibold text-red-600">
                 Dr. Devanshu J Patel

@@ -7,14 +7,14 @@ function Footer() {
     <div className=" bg-[#15222B] pt-10 text-white">
       {/* Bottom section */}
       <div className="bg-[#15222B] pb-10 ">
-        <div className="container mx-auto px-4  flex flex-col md:flex-row md:items-center md:justify-between">
+        <div className="container mx-auto px-4 flex flex-col  md:flex-row md:items-center md:justify-between">
           <div className="mb-8 md:mb-0">
             <Image
               src="/images/vss.png"
               alt="Vadodara Startup Studio"
               width={1000}
               height={1000}
-              className="mb-4 h-20 w-60 object-contain"
+              className="mb-4 h-20 w-60 object-contain "
             />
             <p className="text-sm max-w-md">
               BBA Building, PARUL INNOVATION & ENTREPRENEURSHIP RESEARCH CENTRE
