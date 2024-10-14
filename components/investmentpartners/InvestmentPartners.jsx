@@ -22,7 +22,7 @@ export default function InvestmentPartners() {
   ];
 
   return (
-    <section className="p-10 mt-10 bg-white">
+    <section className="p-10 mt-10 bg-background">
       <div className="container mx-auto text-center">
         {/* Title */}
         <h2 className="text-2xl font-bold mb-10">Investment Partners</h2>

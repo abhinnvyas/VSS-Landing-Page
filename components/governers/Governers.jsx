@@ -38,7 +38,7 @@ export default function Governers() {
                 Dr. Devanshu J Patel
               </h3>
               <p className="text-gray-400">President</p>
-              <p className="mt-2 text-sm max-w-xl">
+              <p className="mt-2 text-xs md:text-sm max-w-xl">
                 Dr. Devanshu Patel, A Dynamic Visionary President Of Parul
                 University, Whose Unflinching Commitment Towards Education Has
                 Made An Impact Not Only In Gujarat But In All The Diversified

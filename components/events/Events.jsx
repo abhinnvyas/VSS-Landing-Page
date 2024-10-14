@@ -53,7 +53,7 @@ const events = [
 
 const Events = () => {
   return (
-    <div className="p-10 mt-20 relative mb-20">
+    <div className="p-10 mt-20 relative mb-20 bg-background">
       <div className="grid grid-cols-4 gap-4">
         {events.map((event) => (
           <div key={event.id} className="col-span-1">
@@ -75,9 +75,8 @@ const Events = () => {
       </div>
       <div className="flex justify-center mt-8">
         <button className="text-black  py-2 px-6 rounded-full">
-          View More 
+          View More
         </button>
-        
       </div>
     </div>
   );

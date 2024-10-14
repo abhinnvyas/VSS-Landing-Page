@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Slogan2Section() {
   return (
-    <section className="p-10 mt-20 mb-20 ">
+    <section className="p-10 mt-20 mb-20 bg-background">
       <div className="container mx-auto relative flex flex-col md:flex-row items-center justify-center space-x-4">
         {/* Lightbulb icon on the left */}
         <div className="hidden md:block absolute -bottom-3 left-20">

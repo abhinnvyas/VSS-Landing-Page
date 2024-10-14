@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Slogan1Section() {
   return (
-    <section className="py-32 bg-white text-center relative">
+    <section className="py-32 bg-background text-center relative">
       {/* Slogan */}
       <h2 className="text-xl md:text-3xl font-bold">
         Built to <span className="text-primary">Innovate</span>, Designed to{" "}

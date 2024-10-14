@@ -5,7 +5,7 @@ import HeroImage from "@/public/images/hero.png"; // Ensure this path is correct
 export default function HeroSection() {
   return (
     <>
-      <section className=" bg-white">
+      <section className=" bg-background">
         <div className="flex flex-col md:flex-row items-center justify-between w-full p-10 min-h-[calc(100vh-80px)]">
           {/* Left Content */}
           <div className="text-center md:text-left max-w-lg mt-10 px-7">

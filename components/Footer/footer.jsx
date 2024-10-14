@@ -7,7 +7,7 @@ function Footer() {
     <div className=" bg-[#15222B] pt-10 text-white">
       {/* Bottom section */}
       <div className="bg-[#15222B] pb-10 ">
-        <div className="container mx-auto px-4 flex flex-wrap justify-between">
+        <div className="container mx-auto px-4  flex flex-col md:flex-row md:items-center md:justify-between">
           <div className="mb-8 md:mb-0">
             <Image
               src="/images/vss.png"

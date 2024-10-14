@@ -12,23 +12,23 @@ const NavigationComponent = ({ activeNavItem, onNavItemClick }) => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col items-center md:flex-row bg-background">
       {navItems.map((item) => (
         <div
           key={item}
-          className="relative"
+          className="relative "
           onClick={() => onNavItemClick(item)}
         >
           <Link
             href={`/${item.toLowerCase()}`}
-            className={`py-2 px-4 ${
+            className={`py-2 px-4  ${
               activeNavItem === item ? "text-primary" : "text-black"
             }`}
           >
             {item}
           </Link>
           {activeNavItem === item && (
-            <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-2 h-2 bg-primary rounded-full" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-2 h-2 bg-primary rounded-full hidden md:block" />
           )}
         </div>
       ))}
@@ -37,5 +37,3 @@ const NavigationComponent = ({ activeNavItem, onNavItemClick }) => {
 };
 
 export default NavigationComponent;
-
-
