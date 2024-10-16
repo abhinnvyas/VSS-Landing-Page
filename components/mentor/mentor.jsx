@@ -1,59 +1,73 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const mentors = [
-  {
-    name: "Mrs. Ray Paul",
-    title: "Chief Executive Officer",
-    image: "/images/paul.png",
-  },
-  {
-    name: "Mrs. Ray Paul",
-    title: "Chief Executive Officer",
-    image: "/images/paul.png",
-  },
-  {
-    name: "Mrs. Ray Paul",
-    title: "Chief Executive Officer",
-    image: "/images/paul.png",
-  },
-  {
-    name: "Mrs. Ray Paul",
-    title: "Chief Executive Officer",
-    image: "/images/paul.png",
-  },
-];
+import Image from "next/image";
 
 export default function Mentor() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const mentors = [
+    {
+      name: "Mrs. Ray Paul",
+      title: "Chief Executive Officer",
+      image: "/images/paul.png",
+    },
+    {
+      name: "Mrs. Jane Doe",
+      title: "Chief Technology Officer",
+      image: "/images/paul.png",
+    },
+    {
+      name: "Mr. John Smith",
+      title: "Chief Financial Officer",
+      image: "/images/paul.png",
+    },
+    {
+      name: "Ms. Alice Johnson",
+      title: "Chief Marketing Officer",
+      image: "/images/paul.png",
+    },
+    {
+      name: "Dr. Bob Brown",
+      title: "Chief Research Officer",
+      image: "/images/paul.png",
+    },
+  ];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % (mentors.length - 2));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + (mentors.length - 2)) % (mentors.length - 2)
+    );
+  };
   return (
-    <div className="bg-background py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-2">
-          Find a Mentor
-        </h2>
-        <p className="text-xl text-center text-gray-600 mb-12">
-          We provide mentorship to improve your startups
-        </p>
-
-        <div className="relative flex justify-center items-center">
-          <button className="absolute left-0 z-10 p-2 bg-white rounded-full shadow-md -ml-4">
-            <ChevronLeft className="w-6 h-6 text-gray-800" />
-          </button>
-
-          <div className="flex justify-between w-full flex-wrap">
-            {mentors.map((mentor, index) => (
-              <div key={index} className="w-72 mx-auto mt-5 md:mt-0">
+    <div className="container mx-auto px-4 py-8">
+      <h2 className="text-3xl font-bold text-center mb-8">
+        Top class Co-founders
+      </h2>
+      <div className="relative">
+        <div className="flex overflow-hidden">
+          <div
+            className="flex transition-transform duration-300 ease-in-out w-full"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {mentors.map((founder, index) => (
+              <div key={index} className="w-full flex-shrink-0 lg:w-1/3 px-2">
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg relative">
                   <Image
-                    src={mentor.image}
-                    alt={mentor.name}
+                    src={founder.image}
+                    alt={founder.name}
                     width={300}
                     height={300}
                     className="w-full h-80 object-cover"
                   />
-                  <div className="absolute bottom-10 right-0  rounded-l-full bg-[#15222B]  text-white px-6 py-2">
-                    <h3 className="font-bold text-base">{mentor.name}</h3>
-                    <p className="text-xs">{mentor.title}</p>
+                  <div className="absolute bottom-10 right-0 rounded-l-full bg-[#15222B] text-white px-6 py-2">
+                    <h3 className="font-bold text-base">{founder.name}</h3>
+                    <p className="text-xs">{founder.title}</p>
                   </div>
                 </div>
                 <button className="w-full text-sm md:text-md mt-2 py-2 md:py-3 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition-colors duration-300">
@@ -62,11 +76,30 @@ export default function Mentor() {
               </div>
             ))}
           </div>
-
-          <button className="absolute right-0 z-10 p-2 bg-white rounded-full shadow-md -mr-4">
-            <ChevronRight className="w-6 h-6 text-gray-800" />
-          </button>
         </div>
+        <button
+          onClick={prevSlide}
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+        >
+          <ChevronLeft className="w-6 h-6 text-gray-800" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+        >
+          <ChevronRight className="w-6 h-6 text-gray-800" />
+        </button>
+      </div>
+      <div className="flex justify-center mt-4">
+        {[...Array(mentors.length - 2)].map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`h-2 w-2 mx-1 rounded-full ${
+              currentIndex === index ? "bg-gray-800" : "bg-gray-300"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );

@@ -76,11 +76,11 @@ const Events = () => {
           <h1 className="text-5xl font-bold mb-2 text-right">EVENTS</h1>
         </div>
       </div>
-      <div className="flex justify-center mt-8">
+      {/* <div className="flex justify-center mt-8">
         <button className="text-black  py-2 px-6 rounded-full">
           View More
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
